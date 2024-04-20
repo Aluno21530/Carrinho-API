@@ -15,10 +15,10 @@ public class OrderCart {
     @JsonIgnore
     private Client client;
     @OneToMany(cascade = CascadeType.ALL)
-    private List<iten> itens;
-    private Double valorTotal;
+    private List<Iten> itens;
+    private Double totalÁmount;
     @Enumerated
     private FormaPagamento formaPagamento;
-    private boolean fechada;
+    private boolean closed;
 
 }

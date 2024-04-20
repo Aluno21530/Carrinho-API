@@ -1,4 +1,4 @@
 package com.project.ordercartAPI.model;
 
-public class iten {
+public class Iten {
 }
