@@ -1,7 +1,7 @@
 package com.project.ordercartAPI.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.project.ordercartAPI.enumeration.FormaPagamento;
+import com.project.ordercartAPI.enumeration.PaymentMethod;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -18,7 +18,7 @@ public class OrderCart {
     private List<Iten> itens;
     private Double totalÁmount;
     @Enumerated
-    private FormaPagamento formaPagamento;
+    private PaymentMethod paymentMethod;
     private boolean closed;
 
 }
