@@ -1,13 +1,13 @@
-package com.project.carrinhoApi;
+package com.project.ordercartAPI;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CarrinhoApiApplication {
+public class OrderCartApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CarrinhoApiApplication.class, args);
+		SpringApplication.run(OrderCartApiApplication.class, args);
 	}
 
 }
