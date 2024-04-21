@@ -30,7 +30,7 @@ public class OrderCart {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Iten> itens;
 
-    private Double totalÁmount;
+    private Double totalAmount;
 
     @Enumerated
     private PaymentMethod paymentMethod;
