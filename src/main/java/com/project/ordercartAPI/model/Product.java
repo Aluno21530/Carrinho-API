@@ -22,7 +22,7 @@ public class Product {
 
     private String name;
 
-    private String unitValue;
+    private double unitValue;
 
     @Builder.Default
     private Boolean available = true;
