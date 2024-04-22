@@ -62,11 +62,12 @@ CREATE TABLE iten (
                       id BIGINT NOT NULL,
                       quantity INTEGER NOT NULL,
                       order_cart_id BIGINT,
-                      product_id BIGINT UNIQUE,
+                      product_id BIGINT,
                       PRIMARY KEY (id),
                       FOREIGN KEY (order_cart_id) REFERENCES order_cart,
                       FOREIGN KEY (product_id) REFERENCES product
 );
+
 
 CREATE TABLE restaurant_menu (
                                  restaurant_id BIGINT NOT NULL,
