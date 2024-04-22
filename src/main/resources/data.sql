@@ -43,7 +43,7 @@ CREATE TABLE product (
                          available BOOLEAN,
                          restaurant_id BIGINT,
                          name VARCHAR(255),
-                         unitValue VARCHAR(255),
+                         unit_value VARCHAR(255),
                          PRIMARY KEY (id),
                          FOREIGN KEY (restaurant_id) REFERENCES restaurant
 );
@@ -51,8 +51,8 @@ CREATE TABLE product (
 CREATE TABLE order_cart (
                             id BIGINT NOT NULL,
                             closed BOOLEAN NOT NULL,
-                            paymentMethod TINYINT CHECK (paymentMethod BETWEEN 0 AND 1),
-                            totalAmount FLOAT(53),
+                            payment_method TINYINT CHECK (payment_method BETWEEN 0 AND 1),
+                            total_amount FLOAT(53),
                             client_id BIGINT NOT NULL,
                             PRIMARY KEY (id),
                             FOREIGN KEY (client_id) REFERENCES client
@@ -89,10 +89,10 @@ INSERT INTO restaurant (id, zip_code, complement, name) VALUES
 INSERT INTO client (id, zip_code, complement, name) VALUES
                                                         (1, '54321', 'Complement 3', 'Client A'),
                                                         (2, '12345', 'Complement 4', 'Client B');
-INSERT INTO product (id, available, name, unitValue, restaurant_id) VALUES
+INSERT INTO product (id, available, name, unit_value, restaurant_id) VALUES
                                                                         (1, true, 'Product A', 10.5, 1),
                                                                         (2, true, 'Product B', 15.75, 1),
                                                                         (3, true, 'Product C', 20.0, 2);
-INSERT INTO order_cart (id, paymentMethod, closed, totalAmount, client_id) VALUES
+INSERT INTO order_cart (id, payment_method, closed, total_amount, client_id) VALUES
                                                                                (1, 0, false, 50.25, 1),
                                                                                (2, 1, false, 0.0, 2);
