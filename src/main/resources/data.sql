@@ -95,5 +95,5 @@ INSERT INTO product (id, available, name, unit_value, restaurant_id) VALUES
                                                                         (2, true, 'Product B', 15.75, 1),
                                                                         (3, true, 'Product C', 20.0, 2);
 INSERT INTO order_cart (id, payment_method, closed, total_amount, client_id) VALUES
-                                                                               (1, 0, false, 50.25, 1),
+                                                                               (1, 0, false, 0.0, 1),
                                                                                (2, 1, false, 0.0, 2);

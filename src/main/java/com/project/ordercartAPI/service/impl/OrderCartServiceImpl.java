@@ -50,7 +50,7 @@ public class OrderCartServiceImpl implements OrderCartService {
             }
         }
         orderCartRepository.save(orderCart);
-        return itenRepository.save(itenToBeAdd);
+        return itenToBeAdd;
     }
 
     @Override
