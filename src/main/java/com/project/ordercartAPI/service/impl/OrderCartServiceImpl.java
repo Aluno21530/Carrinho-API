@@ -12,6 +12,7 @@ import com.project.ordercartAPI.service.OrderCartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -49,6 +50,15 @@ public class OrderCartServiceImpl implements OrderCartService {
                 throw new RuntimeException("It is not possible to add products from different restaurants. Close the order cart or empty it.");
             }
         }
+        List<Double> itensAmount = new ArrayList<>();
+        for (Iten orderCartIten : orderCartItens) {
+            double itenTotalAmount = orderCartIten.getProduct().getUnitValue() * orderCartIten.getQuantity();
+            itensAmount.add(itenTotalAmount);
+        }
+        Double orderCartTotalAmount = itensAmount.stream()
+                .mapToDouble(eachItenTotalAmount -> eachItenTotalAmount)
+                .sum();
+        orderCart.setTotalAmount(orderCartTotalAmount);
         orderCartRepository.save(orderCart);
         return itenToBeAdd;
     }
